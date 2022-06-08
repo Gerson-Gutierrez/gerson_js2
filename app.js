@@ -1,5 +1,5 @@
 // Simulador de Carrito
-
+/*
 class guitarras {
     constructor(nombre, tipo, precio) {
         this.nombre = nombre
@@ -97,3 +97,37 @@ const agregarProducto = () => {
 
 agregarProducto()
 alert('Muchas gracias por su Compra')
+
+
+*/
+
+
+
+class guitarras {
+    constructor(nombre, tipo,imgSrc ,precio) {
+        this.nombre = nombre
+        this.tipo = tipo
+        this.imgSrc = imgSrc
+        this.precio = precio
+    }
+}
+
+const guitarras1 = new guitarras('Guitarra Fender Classic Design', 'acustica',"images/guitarra3.webp " ,106.673)
+const guitarras2 = new guitarras('Guitarra Yamaha Slg200nw Silent Nt Natural', 'Electroacústica',"images/guitarra2.webp ", 244.293)
+const guitarras3 = new guitarras('Guitarra Epiphone Les Paul Special VE', 'eléctrica',"images/guitarra1.webp ",53.515)
+
+const productos = [guitarras1, guitarras2, guitarras3]
+const cardContainer = document.getElementById('cardContainer')
+
+productos.forEach((producto) =>{
+    const card = document.createElement('div')
+    card.className = 'card'
+    card.innerHTML = `
+            <h3 class="cardTitle"> Libro ${producto.nombre} </h3>
+            <img src="${producto.imgSrc}" class="cardImg">
+            <p class="cardDesc"> tipo ${producto.tipo} </p>
+            <span class="cardPrice"> $${producto.precio} </span>
+            <button class="buttonCTA"> Agregar al Carrito </button>
+        `
+    cardContainer.append(card)
+})

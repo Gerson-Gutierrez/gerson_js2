@@ -35,7 +35,7 @@ height: 150px;
 }
 
 .navbar {
-    height: 100px;
+    height: 150px;
     min-height: 10vh;
     display: flex;
     justify-content: space-between;
@@ -91,3 +91,57 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .fotos{
     justify-content: space-between;
 }
+
+
+
+
+
+/* desafio de 07/06 */
+.cardContainer {
+    font-size: large;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.card {
+    width: 25%;
+    padding: 20px 10px;
+    
+    border-radius: 65px;
+    background: linear-gradient(145deg, #24abd6, #2bcbff);
+    box-shadow:  15px 15px 5px #22a0c8,
+                 -15px -15px 5px #2edcff;
+}
+
+.cardImg {
+    width: 50%;
+}
+
+.cardPrice {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.buttonCTA {
+    margin: 10px 0;
+    background-color: rgb(216, 77, 77);
+    color: rgb(247, 247, 247);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.buttonCTA:hover {
+    background-color: #132c4b;
+    box-shadow: 1px 1px 10px lightgrey;
+}
+
+
